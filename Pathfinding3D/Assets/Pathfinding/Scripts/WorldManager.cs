@@ -5,14 +5,11 @@ using UnityEngine;
 public class WorldManager : MonoBehaviour
 {
     public static WorldManager Instance { get; private set; }
-    [SerializeField] GameObject _GridPointPrefab;
     [SerializeField] int GridWidth;
     [SerializeField] int GridHeight;
     [SerializeField] int GridLength;
     public Point[][][] Grid;
     public float PointDistance;
-    public float PointSize;
-    public float InvalidPointSize;
 
     Vector3 startPoint;
 
@@ -40,7 +37,6 @@ public class WorldManager : MonoBehaviour
     private void InitializeGrid()
     {
         startPoint = new Vector3(-GridWidth, -GridHeight, -GridLength) / 2f * PointDistance + transform.position;
-        GameObject gridParent = new GameObject("Grid");
         Grid = new Point[GridWidth][][];
         for (int i = 0; i < GridWidth; i++)
         {
