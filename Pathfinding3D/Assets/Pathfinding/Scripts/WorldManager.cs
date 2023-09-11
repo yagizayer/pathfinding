@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Pathfinding.Scripts;
 using UnityEngine;
 
 public class WorldManager : MonoBehaviour

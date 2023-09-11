@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Refactored_PathFinding.Scripts
 {
     [RequireComponent(typeof(Collider))]
-    public class PathFinderObstacle : MonoBehaviour
+    public class PathObstacle : MonoBehaviour
     {
         [SerializeField]
         private Collider myCollider;
